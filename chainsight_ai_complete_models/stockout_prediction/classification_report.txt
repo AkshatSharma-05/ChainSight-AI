@@ -1,0 +1,8 @@
+              precision    recall  f1-score   support
+
+ No Stockout     0.9838    0.9680    0.9759     38741
+    Stockout     0.9220    0.9596    0.9405     15259
+
+    accuracy                         0.9657     54000
+   macro avg     0.9529    0.9638    0.9582     54000
+weighted avg     0.9664    0.9657    0.9659     54000

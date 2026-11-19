@@ -1,0 +1,49 @@
+{
+    "feature_names": [
+        "opening_stock",
+        "received_stock",
+        "avg_daily_demand_7d",
+        "avg_daily_demand_30d",
+        "demand_std_7d",
+        "inventory_coverage_days",
+        "supplier_avg_lead_time",
+        "supplier_reliability",
+        "warehouse_utilization_pct",
+        "warehouse_id",
+        "product_category",
+        "day_of_week",
+        "month"
+    ],
+    "numerical_features": [
+        "opening_stock",
+        "received_stock",
+        "avg_daily_demand_7d",
+        "avg_daily_demand_30d",
+        "demand_std_7d",
+        "inventory_coverage_days",
+        "supplier_avg_lead_time",
+        "supplier_reliability",
+        "warehouse_utilization_pct"
+    ],
+    "categorical_features": [
+        "warehouse_id",
+        "product_category",
+        "day_of_week",
+        "month"
+    ],
+    "feature_dtypes": {
+        "opening_stock": "int64",
+        "received_stock": "int64",
+        "avg_daily_demand_7d": "float64",
+        "avg_daily_demand_30d": "float64",
+        "demand_std_7d": "float64",
+        "inventory_coverage_days": "float64",
+        "supplier_avg_lead_time": "int64",
+        "supplier_reliability": "float64",
+        "warehouse_utilization_pct": "float64",
+        "warehouse_id": "object",
+        "product_category": "object",
+        "day_of_week": "int64",
+        "month": "int64"
+    }
+}

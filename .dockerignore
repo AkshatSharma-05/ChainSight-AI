@@ -1,0 +1,33 @@
+# Exclude large datasets
+public_datasets/
+*.csv
+*.parquet
+
+# Exclude Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Exclude virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Exclude git & docs build
+.git/
+.github/
+.vscode/
+.idea/
+
+# Exclude local MLflow artifacts and database from image build
+mlruns/
+mlflow.db
+*.db
+
+# Temporary files
+*.tmp
+*.log

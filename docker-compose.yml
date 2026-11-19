@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  # 1. MLflow Tracking Server and Model Registry
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:v2.15.0
+    container_name: chainsight-mlflow
+    restart: unless-stopped
+    ports:
+      - "6001:6001"
+    environment:
+      - MLFLOW_TRACKING_URI=sqlite:////mlflow/mlflow.db
+    volumes:
+      - mlflow_data:/mlflow
+    command: >
+      mlflow server
+      --backend-store-uri sqlite:////mlflow/mlflow.db
+      --default-artifact-root /mlflow/artifacts
+      --host 0.0.0.0
+      --port 6001
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:6001/"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  # 2. ChainSight-AI FastAPI Application
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: chainsight-api
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - MLFLOW_TRACKING_URI=http://mlflow:6001
+      - USE_MLFLOW_REGISTRY=false
+      - PORT=8000
+    depends_on:
+      mlflow:
+        condition: service_healthy
+    volumes:
+      - ./models:/app/models:ro
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 20s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+
+volumes:
+  mlflow_data:
+    name: chainsight_mlflow_data

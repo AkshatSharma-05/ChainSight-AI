@@ -1,0 +1,4 @@
+Task,Model,Metric_Name,Baseline_Performance,Model_Performance
+Walmart M5 Demand Forecasting,LightGBM Regressor,MAE / RMSE / WAPE,"MAE: 1.1193, RMSE: 2.2818, WAPE: 0.9045","MAE: 0.9324, RMSE: 1.7573, WAPE: 0.7535"
+Olist Delivery ETA Prediction,CatBoost Regressor,MAE / RMSE,"MAE: 6.7353, RMSE: 7.7199","MAE: 6.1624, RMSE: 7.2760"
+Olist Seller Delay Risk Prediction,CatBoost Classifier,Precision / Recall / ROC-AUC,N/A,"Prec: 0.0445, Rec: 0.2236, ROC-AUC: 0.4113"

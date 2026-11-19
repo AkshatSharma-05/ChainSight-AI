@@ -1,0 +1,58 @@
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environments
+.venv/
+venv/
+env/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Testing & coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# IDE and OS
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Large Public Datasets (Walmart M5 and Olist are >500MB total)
+public_datasets/
+*.csv.gz
+*.parquet
+
+# MLflow Tracking & Local DB (persistent data should not be committed to Git)
+mlflow.db
+mlflow.db-journal
+mlruns/
+mlflow_data/
+
+# Environment Variables & Secrets
+.env
+.env.*
+secrets.json

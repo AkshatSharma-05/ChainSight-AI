@@ -1,0 +1,5 @@
+Model,Accuracy,Precision,Recall,F1-Score,ROC-AUC,PR-AUC
+Baseline (Dummy),0.7174,0.0,0.0,0.0,0.5,0.6413
+RandomForest,0.9631,0.9088,0.9663,0.9367,0.9887,0.9563
+XGBoost,0.9659,0.9227,0.9595,0.9408,0.9901,0.9594
+LightGBM,0.9657,0.922,0.9596,0.9405,0.9901,0.96
