@@ -1,7 +1,7 @@
 # ChainSight-AI
 ### Autonomous Supply Chain Resilience & Decision Intelligence Platform
 
-[![CI](https://github.com/gamin28/ChainSight-AI/actions/workflows/ci.yaml/badge.svg)](https://github.com/gamin28/ChainSight-AI/actions/workflows/ci.yaml)
+[![CI](https://github.com/AkshatSharma-05/ChainSight-AI/actions/workflows/ci.yaml/badge.svg)](https://github.com/AkshatSharma-05/ChainSight-AI/actions/workflows/ci.yaml)
 [![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/release/python-3110/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.128-green.svg)](https://fastapi.tiangolo.com)
 [![MLflow](https://img.shields.io/badge/MLflow-3.18-orange.svg)](https://mlflow.org)
